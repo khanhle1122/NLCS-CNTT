@@ -41,7 +41,7 @@ class filecontroller extends Controller
                 // 'price'=>$price,
             ]);
             
-            return redirect()->back()->with('success', 'File uploaded successfully!');
+            return redirect('cart'); 
         }
 
         return redirect()->back()->with('error', 'Invalid file or file upload failed.');

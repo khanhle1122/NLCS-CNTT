@@ -22,6 +22,17 @@
                 <li><i class="fa-solid fa-truck me-1" style="color: #00942c;" ></i>Giao Tài Liệu Đến Tận Nơi Bạn Cần</li>
                 
             </ul>
+            @if(Session::has('success'))
+                <div id="success-alert" class="alert alert-success m-auto">
+                    {{ Session::get('success') }}
+                </div>
+            @endif
+
+            @if(Session::has('error'))
+                <div id="error-alert" class="alert alert-danger m-auto">
+                    {{ Session::get('error') }}
+                </div>
+            @endif
             <div class="ms-5 mt-5 ps-5"><img class="img-sao" style="height: 60px" src="image/sao.png" alt=""></div>            
         </div>
     </section>
@@ -34,9 +45,9 @@
             <h2 class="ms-5 ps-5 text-black-50">Liên Hệ Với Chúng Tôi</h2>
             <div class="text-center"> <img class="img-line" src="image/line.png" alt=""></div>
         </div>
-        <div class=" row">
+        <div class="">
         
-            <div class="col-8 ms-5   ">
+            {{-- <div class="col-8 ms-5   ">
                 <form>
                     <div class="form-group">
                         <label for="name"><b>Tên của bạn</b></label>
@@ -55,9 +66,9 @@
                     </div>
                     <button class="btn btn-primary mx-auto" type="submit">Gửi</button>
                 </form>
-            </div>
+            </div> --}}
             
-            <div class="col mt-3">
+            <div class=" text-center mt-3">
                 
                 <a href="#">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841518442039!2d105.76804037515804!3d10.029933690077037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0895a51d60719%3A0x9d76b0035f6d53d0!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBD4bqnbiBUaMah!5e0!3m2!1svi!2s!4v1694594316393!5m2!1svi!2s" width="320" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -71,3 +82,10 @@
     </section>
 </main>
 @include('layouts.footer')
+
+<script>
+    setTimeout(function(){
+        document.getElementById('success-alert').style.display = 'none';
+        document.getElementById('error-alert').style.display = 'none';
+    }, 5000);
+</script>

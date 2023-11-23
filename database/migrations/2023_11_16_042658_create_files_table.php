@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('path');
             $table->integer('quantity');
             $table->string('kichthuoc');
-            // $table->string('price');
+            $table->enum('status',['up','load','check'])->default('up');
             $table->timestamps();
         });
     }

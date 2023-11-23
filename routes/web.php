@@ -27,9 +27,6 @@ Route::get('/contract', function () {
     return view('contract');
 })->name('contract');
 
-// Route::get('/cart', function () {
-//     return view('cart');
-// })->name('cart');
 
 Route::get('/intro', function () {
     return view('intro');
@@ -39,14 +36,9 @@ Route::get('/photo', function () {
     return view('photo');
 })->name('photo');
 
-// Route::get('/admin', function () {
-//     return view('admin.admin');
-// })->middleware(['auth', 'verified'])->name('admin');
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
 
 
 
@@ -59,18 +51,20 @@ Route::middleware('auth')->group(function () {
 });
 route::middleware(['auth','role:admin'])->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('AdminDashboard');
+    // Route::get('/admin/dashboard', [AdminController::class, 'showAdmin'])->name('admin.show');
+    // Route::get('/admin/dashboard', [AdminController::class, 'checkFile'])->name('admin.checkFile');
+    // Route::get('/admin/dashboard', [AdminController::class, 'checkCart'])->name('admin.checkCart');
+
 });
 
 
 
 require __DIR__.'/auth.php';
 
-// routes/web.php
 
 
 
 Route::middleware(['auth'])->group(function () {
-    // Các route yêu cầu đăng nhập sẽ ở đây.
     Route::get('/upload', [FileController::class, 'showForm']);
     Route::post('/upload', [FileController::class, 'uploadFile'])->name('upload.file');
    
@@ -81,3 +75,7 @@ Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
 Route::post('/cart/remove', [CartController::class, 'removeFromCart'])->name('cart.remove');
 Route::get('/file/delete/{id}', [FileController::class, 'deleteFile'])->name('file.delete');
+// Route::get('/cart/check', [CartController::class, 'checkCart'])->name('cart.check');
+
+
+

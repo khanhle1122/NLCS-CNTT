@@ -31,7 +31,7 @@
             </div>
         </div>
     </section>
-    <section class="mb-5 p-100">
+    {{-- <section class="mb-5 p-100">
         <div class="">
             <div class="form-group mb-3">
                 <label for="name">Tên của bạn</label><br>
@@ -47,6 +47,6 @@
             </div>
             <button class="btn btn-primary float-end mt-2 mb-5" type="submit">Gửi</button>
         </div>
-    </section>
+    </section> --}}
 </main>
 @include('layouts.footer')
