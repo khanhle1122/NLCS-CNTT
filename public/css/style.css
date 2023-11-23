@@ -1,0 +1,76 @@
+
+#logo {
+    width: 70px;
+}
+#logo-footer{
+    width: 150px;
+}
+li{
+    list-style-type: none;
+}
+.img-line{
+    height: 30px;
+    
+}
+.h2:after {
+    position: relative;
+    left: 50%;
+    display: block;
+    content: " ";
+    width: 200px;
+    height: 3px;
+    transform: skewX(-12deg) translateX(-50%);
+    background: radial-gradient(#cddc39, #fff);
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #54616c;
+    padding: 10px;
+}     
+header {
+    background-color: #ffffff;
+    height: 76px;
+}
+
+.btn-hover:hover {
+color: #db5e1b;
+}
+
+.with-thin{
+    font-weight: 200;
+}
+.bg-hr{
+    height: 10px;
+    width: 100%;
+}
+.img-sao{
+    width: 50px;
+}
+.p-100{
+  padding-left: 365px;  
+  padding-right: 365px;
+}
+.container_div {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ff0000;
+    text-align: center;
+}
+
+/* Style cho thẻ a */
+.container_div a {
+    text-decoration: none;
+    color: #007bff;
+}
+        /* Style cho vùng chọn tệp và nút tải lên */
+        /* #fileInput {
+            display: none;
+        } */
+
+        #fileConfig {
+            display: none;
+            margin-top: 10px;
+        }
+    
